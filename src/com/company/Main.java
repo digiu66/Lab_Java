@@ -16,5 +16,9 @@ public class Main {
         myself.pet = dog;
         myself.pet.feed();
         myself.pet.takeForAWalk();
+
+        Car batmobile = new Car("Batmobile", "Tumbler", 2005, 1000, "black");
+
+        myself.setCar(batmobile);
     }
 }

@@ -5,5 +5,13 @@ public class Human {
     String lastName;
     Phone phone;
     Animal pet;
+    private Car car;
 
+    public Car getCar()
+    {
+        return car;
+    }
+
+    public void setCar(Car car) {
+    }
 }
