@@ -31,6 +31,13 @@ public void setSalary(Double salary) {
     }
 
     public void setCar(Car car) {
-    this.car = car;
+    if(car.value < salary) {
+        this.car = car;
+    } else if (this.salary > car.value/12) {
+        System.out.println("Car bought on credit.");
+        this.car = car;
+    } else {
+        System.out.println("You can't afford a car.");
+    }
     }
 }
