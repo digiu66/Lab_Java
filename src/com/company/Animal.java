@@ -42,4 +42,9 @@ public class Animal {
             System.out.println("I like walking with you.");
         }
     }
+
+    public String toString() {
+        return name + " " + species + " " + weight;
+    }
+
 }

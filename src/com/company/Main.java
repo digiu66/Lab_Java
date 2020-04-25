@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.devices.Car;
+
 import java.util.Date;
 
 public class Main {
@@ -33,5 +35,10 @@ public class Main {
         System.out.println("New info sent to our accountants.");
         System.out.println("You need to get the annex from Pani Hania.");
         System.out.println("ZUS knows. FBI open up!");
+
+
+        System.out.println(myself);
+        System.out.println(batmobile);
+        System.out.println(dog);
     }
 }
