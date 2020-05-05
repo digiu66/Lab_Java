@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.devices.Car;
+import com.company.devices.Phone;
 
 import java.util.Date;
 
@@ -23,7 +24,11 @@ public class Main {
 
         Car batmobile = new Car("Batmobile", "Tumbler", 2005, 1000, "black");
 
+        Phone samsung = new Phone("samsung", "galaxy s1500", 2022);
+
         myself.setCar(batmobile);
+        myself.setPhone(samsung);
+
         System.out.println("My car: " + myself.getCar());
 
         Date date = new Date(System.currentTimeMillis());
@@ -40,5 +45,9 @@ public class Main {
         System.out.println(myself);
         System.out.println(batmobile);
         System.out.println(dog);
+
+
+        batmobile.turnOn();
+        samsung.turnOn();
     }
 }

@@ -31,6 +31,11 @@ public class Human {
         return car;
     }
 
+    public Phone getPhone() {
+
+        return phone;
+    }
+
     public void setCar(Car car) {
         if (car.value < salary) {
             this.car = car;
@@ -40,6 +45,10 @@ public class Human {
         } else {
             System.out.println("You can't afford a car.");
         }
+    }
+
+    public void setPhone(Phone phone) {
+        this.phone = phone;
     }
 
     public String toString() {

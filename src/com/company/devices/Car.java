@@ -1,12 +1,8 @@
 package com.company.devices;
 
-public class Car {
-    public final String brand;
-    public final String model;
-    public final Integer yearOfProduction;
+public class Car extends Device {
     public final Integer enginePower;
     public String color;
-
     public Integer value = 10000;
 
 
@@ -17,6 +13,11 @@ public class Car {
         this.enginePower = enginePower;
         this.color = color;
     }
+
+    public void turnOn() {
+        super.turnOn();
+        System.out.println("Your car is up and running, vroom vroom.");
+        }
 
 
     public String toString() {
