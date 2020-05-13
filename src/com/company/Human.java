@@ -5,12 +5,13 @@ import com.company.devices.Car;
 import com.company.devices.Phone;
 
 public class Human {
-    String firstName;
-    String lastName;
-    Phone phone;
-    Animal pet;
-    private Car car;
+    public String firstName;
+    public String lastName;
+    public Phone phone;
+    public Animal pet;
+    public Car car;
     private Double salary = 3000.0;
+    public Double cash = 10000.0;
 
 
     public Double getSalary() {

@@ -1,6 +1,9 @@
 package com.company.devices;
 
-abstract class Device {
+import com.company.Human;
+import com.company.sellable;
+
+public class Device implements sellable {
     public String brand;
     public String model;
     public Integer yearOfProduction;
@@ -14,4 +17,22 @@ abstract class Device {
     }
 
 
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if (seller.car != null && buyer.cash >= price) {
+            seller.cash = seller.cash + price;
+            buyer.cash = buyer.cash - price;
+            buyer.car = seller.car;
+            seller.car = null;
+            System.out.println(buyer.firstName + " " + buyer.lastName + " is now the owner of " + buyer.car);
+        } else if(seller.phone != null && buyer.cash >= price) {
+            seller.cash = seller.cash + price;
+            buyer.cash = buyer.cash - price;
+            buyer.phone = seller.phone;
+            seller.phone = null;
+            System.out.println(buyer.firstName + " " + buyer.lastName + " is now the owner of " + buyer.phone);
+        } else {
+            System.out.println("Piaseczny has no more money.");
+        }
+    }
 }

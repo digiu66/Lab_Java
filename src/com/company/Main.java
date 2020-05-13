@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class Main {
 
-    public static void main(String [] args) {
+    public static void main(String [] args){
 
         Animal dog = new Animal("dog");
         dog.name = "Luska";
@@ -16,6 +16,9 @@ public class Main {
         Human myself = new Human();
         myself.firstName = "Igor";
         myself.lastName = "Banach";
+        Human neighbor = new Human();
+        neighbor.firstName = "Andrzej";
+        neighbor.lastName = "Piaseczny";
 
 
         myself.pet = dog;
@@ -49,5 +52,14 @@ public class Main {
 
         batmobile.turnOn();
         samsung.turnOn();
+
+        dog.sell(myself, neighbor, 1000.0);
+        System.out.println("My pet: " + myself.pet);
+        System.out.println("My neighbor's pet: " + neighbor.pet);
+        System.out.println("My cash: " + myself.cash);
+        System.out.println("Andrzej's cash: " + neighbor.cash);
+
+        batmobile.sell(myself, neighbor, 9000.0);
+        samsung.sell(myself, neighbor, 2000.0);
     }
 }

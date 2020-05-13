@@ -1,8 +1,6 @@
 package com.company;
 
-import java.sql.SQLOutput;
-
-public class Animal {
+public class Animal implements sellable {
     String name;
     final String species;
     private Double weight;
@@ -47,4 +45,14 @@ public class Animal {
         return name + " " + species + " " + weight;
     }
 
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if(seller.pet != null && buyer.cash >= price) {
+            seller.cash = seller.cash + price;
+            buyer.cash = buyer.cash - price;
+            buyer.pet = seller.pet;
+            seller.pet = null;
+            System.out.println(buyer.firstName + " " + buyer.lastName + " is now the owner of " + buyer.pet.name);
+        }
+    }
 }
