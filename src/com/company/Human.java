@@ -1,6 +1,7 @@
 package com.company;
 
 
+import com.company.creatures.Animal;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
@@ -49,6 +50,7 @@ public class Human {
     }
 
     public void setPhone(Phone phone) {
+
         this.phone = phone;
     }
 

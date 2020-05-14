@@ -1,25 +1,29 @@
-package com.company;
+package com.company.creatures;
 
-public class Animal implements sellable {
-    String name;
+import com.company.Human;
+import com.company.sellable;
+
+public abstract class Animal implements sellable, Feedable {
+    public String name;
     final String species;
-    private Double weight;
+    public Double weight;
 
     static final Double DEFAULT_DOG_WEIGHT = 5.0; //small dogs are cooler I guess
     static final Double DEFAULT_CAT_WEIGHT = 3.0;
+    static final Double DEFAULT_COW_WEIGHT = 500.0;
 
     public Animal(String species) {
         this.species = species;
         if (species == "dog") {
             this.weight = DEFAULT_DOG_WEIGHT;
-        }
-        else if (species == "cat") {
+        } else if (species == "cat") {
             this.weight = DEFAULT_CAT_WEIGHT;
+        } else if (species == "cow") {
+            this.weight = DEFAULT_COW_WEIGHT;
         }
     }
 
-
-    void feed() {
+    public void feed() {
         if (weight > 0) {
             weight++;
             System.out.println("I weigh " + weight);
@@ -30,8 +34,7 @@ public class Animal implements sellable {
         }
     }
 
-
-    void takeForAWalk() {
+    public void takeForAWalk() {
         weight--;
         if (weight <= 0) {
             System.out.println("I'm dead and I can't walk no more");
