@@ -4,9 +4,11 @@ import com.company.creatures.Animal;
 import com.company.creatures.FarmAnimal;
 import com.company.creatures.Pet;
 import com.company.devices.Car;
+import com.company.devices.LPG;
 import com.company.devices.Phone;
 
 import java.util.Date;
+import java.util.List;
 
 public class Main {
 
@@ -28,7 +30,7 @@ public class Main {
         myself.pet.feed();
         myself.pet.takeForAWalk();
 
-        Car batmobile = new Car("Batmobile", "Tumbler", 2005, 1000, "black");
+        Car batmobile = new LPG("Batmobile", "Tumbler", 2005, 1000, "black");
 
         Phone samsung = new Phone("samsung", "galaxy s1500", 2022);
 
@@ -76,5 +78,11 @@ public class Main {
 
         cow.feed(4.0);
 
+
+        samsung.installAnApp("Instagram");
+        samsung.installAnApp("Facebook", 1.32);
+        samsung.installAnApp("G-Drive", 1.6, null);
+
+        batmobile.refuel();
     }
 }

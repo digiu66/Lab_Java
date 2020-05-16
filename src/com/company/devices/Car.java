@@ -1,6 +1,6 @@
 package com.company.devices;
 
-public class Car extends Device {
+public abstract class Car extends Device {
     public final Integer enginePower;
     public String color;
     public Integer value = 10000;
@@ -14,11 +14,13 @@ public class Car extends Device {
         this.color = color;
     }
 
+
     public void turnOn() {
         super.turnOn();
         System.out.println("Your car is up and running, vroom vroom.");
         }
 
+     public abstract void refuel();
 
     public String toString() {
         return brand + " " + model + " " + yearOfProduction + " " + enginePower + " " + color + " " + value;
