@@ -1,8 +1,6 @@
 package com.company.devices;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.List;
+
 
 public class Phone extends Device {
     public String serverAddress;

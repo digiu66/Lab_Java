@@ -4,15 +4,18 @@ package com.company;
 import com.company.creatures.Animal;
 import com.company.devices.Car;
 import com.company.devices.Phone;
+import java.util.ArrayList;
 
 public class Human {
     public String firstName;
     public String lastName;
     public Phone phone;
     public Animal pet;
-    public Car car;
+    public Integer capacity = 5;
+    public ArrayList<Car> garage = new ArrayList<Car>(capacity);
     private Double salary = 3000.0;
     public Double cash = 10000.0;
+
 
 
     public Double getSalary() {
@@ -28,9 +31,9 @@ public class Human {
         }
     }
 
-    public Car getCar() {
+    public Car getCar(Integer parkingSpace) {
 
-        return car;
+        return garage.get(parkingSpace);
     }
 
     public Phone getPhone() {
@@ -38,12 +41,12 @@ public class Human {
         return phone;
     }
 
-    public void setCar(Car car) {
+    public void setCar(Car car, Integer parkingSpace) {
         if (car.value < salary) {
-            this.car = car;
+            garage.add(parkingSpace, car);
         } else if (this.salary > car.value / 12) {
-            System.out.println("Car bought on credit.");
-            this.car = car;
+            System.out.println(car.brand + " bought on credit.");
+            garage.add(parkingSpace, car);
         } else {
             System.out.println("You can't afford a car.");
         }
@@ -54,7 +57,12 @@ public class Human {
         this.phone = phone;
     }
 
+    public void setGarage() {
+        this.garage = new ArrayList<Car>(capacity);
+        System.out.println("Your garage now has " + capacity + " parking spaces.");
+    }
+
     public String toString() {
-        return firstName + " " + lastName + " " + pet + " " + car;
+        return firstName + " " + lastName + " " + pet + " " + garage;
     }
 }

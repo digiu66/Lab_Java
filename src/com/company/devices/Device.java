@@ -19,13 +19,7 @@ public class Device implements sellable {
 
     @Override
     public void sell(Human seller, Human buyer, Double price) {
-        if (seller.car != null && buyer.cash >= price) {
-            seller.cash = seller.cash + price;
-            buyer.cash = buyer.cash - price;
-            buyer.car = seller.car;
-            seller.car = null;
-            System.out.println(buyer.firstName + " " + buyer.lastName + " is now the owner of " + buyer.car);
-        } else if(seller.phone != null && buyer.cash >= price) {
+            if(seller.phone != null && buyer.cash >= price) {
             seller.cash = seller.cash + price;
             buyer.cash = buyer.cash - price;
             buyer.phone = seller.phone;
