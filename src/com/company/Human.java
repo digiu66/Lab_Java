@@ -32,7 +32,6 @@ public class Human {
     }
 
     public Car getCar(Integer parkingSpace) {
-
         return garage.get(parkingSpace);
     }
 

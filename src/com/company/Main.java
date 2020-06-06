@@ -22,6 +22,9 @@ public class Main {
         Human neighbor = new Human();
         neighbor.firstName = "Andrzej";
         neighbor.lastName = "Piaseczny";
+        Human brother = new Human();
+        brother.firstName = "Bambo";
+        brother.lastName = "Bimbo";
 
 
         myself.pet = dog;
@@ -37,6 +40,7 @@ public class Main {
         Phone samsung = new Phone("samsung", "galaxy s1500", 2022);
 
         myself.setGarage();
+        neighbor.setGarage();
         myself.setCar(batmobile, 0);
         myself.setCar(tank, 1);
         myself.setCar(tesla1, 2);
@@ -91,5 +95,15 @@ public class Main {
         samsung.installAnApp("G-Drive", 1.6, null);
 
         batmobile.refuel();
+
+        System.out.println(myself.getCar(1));
+        System.out.println(myself.getCar(2));
+
+        System.out.println(batmobile.ownerList);
+
+        System.out.println(batmobile.owner.firstName + ' ' + batmobile.owner.lastName);
+
+        Car.sell(myself, neighbor, 0000.0, 1);
+        System.out.println("I gave it to you for free, you poor bastard. But I got two more so whatever.");
     }
 }
