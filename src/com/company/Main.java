@@ -105,5 +105,19 @@ public class Main {
 
         Car.sell(myself, neighbor, 0000.0, 1);
         System.out.println("I gave it to you for free, you poor bastard. But I got two more so whatever.");
+
+
+        System.out.println("Cash before transaction: " + myself.cash);
+
+
+
+        samsung.installAnApp2(myself, Application.appstore.get(2));
+        System.out.println(samsung.installed(Application.appstore.get(1)));
+
+        System.out.println("Cash after transaction: " + myself.cash);
+
+        samsung.installAnApp2(neighbor, Application.appstore.get(3));
+
+
     }
 }
