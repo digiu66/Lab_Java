@@ -1,3 +1,3 @@
-# Lab_Javascript
-labory javascript
-Zajęcia z Javascriptu.
+# Lab_Java
+labory java
+Zajęcia z Javy.
